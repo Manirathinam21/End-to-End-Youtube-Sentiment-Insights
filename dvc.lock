@@ -66,3 +66,42 @@ stages:
       hash: md5
       md5: 98515da5d394ff2c05dd7217ce21e3f7
       size: 36874
+  model_evaluation:
+    cmd: python src/model/model_evaluation.py
+    deps:
+    - path: data/interim/test_processed.csv
+      hash: md5
+      md5: 4f30375397ec89fead1745ee6d70f201
+      size: 1000526
+    - path: data/interim/train_processed.csv
+      hash: md5
+      md5: 35027dfda8274bd9356544f2ff358aa4
+      size: 4134324
+    - path: lgbm_model.pkl
+      hash: md5
+      md5: f360dfb33c0baaa3de7293f6126267ca
+      size: 3886719
+    - path: src/model/model_evaluation.py
+      hash: md5
+      md5: efbac53fbe247e2b9c2a2cde38d431d9
+      size: 7386
+    - path: tfidf_vectorizer.pkl
+      hash: md5
+      md5: 98515da5d394ff2c05dd7217ce21e3f7
+      size: 36874
+    outs:
+    - path: experiment_info.json
+      hash: md5
+      md5: 03c820dcbbcbe3c1b91bdceec5ca9d59
+      size: 87
+  model_registration:
+    cmd: python src/model/register_model.py
+    deps:
+    - path: experiment_info.json
+      hash: md5
+      md5: 03c820dcbbcbe3c1b91bdceec5ca9d59
+      size: 87
+    - path: src/model/register_model.py
+      hash: md5
+      md5: 104bd94c8952d85ecfe72ad074ae49ad
+      size: 2514
