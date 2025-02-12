@@ -77,7 +77,7 @@ export MLFLOW_TRACKING_URI=http://ec2-54-147-36-34.compute-1.amazonaws.com:5000/
 
 ```
 
-### how to get youtube api key from gcp:
+### How to get youtube api key from gcp:
 https://www.youtube.com/watch?v=i_FdiQMwKiw
 
 ## AWS-CICD-Deployment-with-Github-Actions
@@ -140,7 +140,9 @@ newgrp docker
 ### 6. Configure EC2 as self-hosted runner:
 
 ```bash
-setting>actions>runner>new self hosted runner> choose os> then run command one by one
+github>settings>actions>runner>new self hosted runner> choose os> then run command one by one in EC2 CLI
+
+Enter the name of Runner: self-hosted
 ```
 
 ### 7. Setup github secrets:
